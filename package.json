@@ -1,5 +1,5 @@
 {
-  "name": "innovator-island",
+  "name": "node-typescript-seed",
   "version": "0.0.1",
   "main": "src/index.ts",
   "author": "Glenny De Cock",
@@ -7,8 +7,10 @@
   "scripts": {
     "predev": "rimraf dist/*",
     "dev": "tsc -p tsconfig.json -w",
+    "start": "node dist/index.js",
     "prebuild": "rimraf dist/* ",
     "build": "cross-env NODE_ENV=production tsc -p tsconfig.json",
+    "test": "jest --expand --verbose",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --check --loglevel warn .",
@@ -18,6 +20,7 @@
     "source-map-support": "^0.5.19"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.20",
     "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
@@ -27,9 +30,11 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-promise": "^4.2.1",
     "husky": "^4.3.8",
+    "jest": "^26.6.3",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.3",
     "typescript": "^4.1.3"
   }
 }
