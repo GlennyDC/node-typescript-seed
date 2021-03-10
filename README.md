@@ -1,1 +1,1 @@
-# Node.js with TS boilerplate
+# Node.js with Typescript seed
